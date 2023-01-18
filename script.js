@@ -27,6 +27,12 @@ function displayBooks() {
             cell.appendChild(cellText);
             row.appendChild(cell);
         }
+        const delButton = document.createElement("button")
+        delButton.className = 'delButton';
+        delButton.id = `${i}`;
+        delButton.addEventListener("click", deleteBook);
+        row.appendChild(delButton);
+        row.className = `row${i}`;
         tbody.appendChild(row);
         bookmark += 1;
     }
@@ -52,7 +58,16 @@ function handleSubmit(event) {
     event.preventDefault();
 }
 
-
+function deleteBook(event) {
+    console.log(event.target.id);
+    let rowNum = parseInt(event.target.id); 
+    //remove data from library array
+    myLibrary.splice(rowNum);
+    let bookForDeletion = document.querySelector(`.row${rowNum}`);
+    bookForDeletion.remove();
+    bookmark -= 1;
+    displayBooks();
+}
 
 addBookToLibrary('Patrick Rothfuss', 'The Name of the Wind', '662', 'read');
 addBookToLibrary('Patrick Rothfuss', 'The Wise Man\'s fear', '994', 'read');
