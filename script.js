@@ -4,10 +4,11 @@ let form = document.getElementsByClassName("form-wrap");
 let bookmark = 0;
 
 // book constructor
-function Book(author, title, pages, readStatus) {
+function Book(author, title, pages, dateFinished, readStatus) {
   this.author = author;
   this.title = title;
   this.pages = pages;
+  this.dateFinished = dateFinished;
   this.readStatus = readStatus;
 }
 
@@ -63,7 +64,8 @@ function handleSubmit(event) {
       bookToAdd[0].value,
       bookToAdd[1].value,
       bookToAdd[2].value,
-      bookToAdd[3].value
+      bookToAdd[3].value,
+      bookToAdd[4].value
     )
   );
   form[0].style.display = "none";
@@ -89,7 +91,7 @@ function readBook(event) {
 
 
 //stock the shelves with two classics and a dream
-addBookToLibrary('Patrick Rothfuss', 'The Name of the Wind', '662', 'read');
-addBookToLibrary('Patrick Rothfuss', 'The Wise Man\'s fear', '994', 'read');
-addBookToLibrary('Patrick Rothfuss', 'The Doors of Stone', 'unknown', 'not read');
+addBookToLibrary('Patrick Rothfuss', 'The Name of the Wind', '662', 'date', 'read');
+addBookToLibrary('Patrick Rothfuss', 'The Wise Man\'s fear', '994', 'date', 'read');
+addBookToLibrary('Patrick Rothfuss', 'The Doors of Stone', 'unknown', 'someday', 'not read');
 addBooksToLib();
