@@ -9,32 +9,36 @@
   <title>Project: Library</title>
 </head>
 <body>
-  <table>
-        <tr>
-            <th>Author</th>
-            <th>Title</th>
-            <th>Pages</th>
-            <th>Read?</th>
-        </tr>
-        <tbody></tbody>
-  </table>
+  <div class="master-wrap">
+    <table>
+          <tr>
+              <th>Author</th>
+              <th>Title</th>
+              <th>Pages</th>
+              <th>Read?</th>
+          </tr>
+          <tbody></tbody>
+    </table>
+  
 
-  <button type="button" onclick="showNewBookForm()">New Book</button>
+  <div class="submit-button-wrap">
+    <button class="new-book" type="button" onclick="showNewBookForm()">New Book</button>
+  </div>
 
-<div class="form-wrap">
-    <form method="post">
-        <label for="author">Author</label>
-        <input type="text" id="Author">
-        <label for="title">Title</label>
-        <input type="text" id="title">
-        <label for="pages">Pages</label>
-        <input type="text" id="pages">
-        <label for="read">Read?</label>
-        <input type="text" id="read">
-        <button class="submit" type="submit"></button>
-    </form>
+  <div class="form-wrap">
+      <form method="post">
+          <label for="author">Author</label>
+          <input type="text" id="Author">
+          <label for="title">Title</label>
+          <input type="text" id="title">
+          <label for="pages">Pages</label>
+          <input type="text" id="pages">
+          <label for="read">Read?</label>
+          <input type="text" id="read">
+          <button class="submit" type="submit">Submit</button>
+      </form>
+  </div>
 </div>
-
   <script src="script.js"></script>
 </body>
 </html>
