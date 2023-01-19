@@ -20,6 +20,21 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+body {
+    background-color:blanchedalmond;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button {
+    background-color:rgba(138, 67, 205, 0.526);
+    border-radius: 2rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
 .form-wrap {
     display: none;
 }
@@ -59,4 +74,5 @@ table, td, th {
 table {
     border-collapse: collapse;
     width: 90%;
+    background-color: azure;
 }
